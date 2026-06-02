@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en" id="htmlRoot">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidad — Italiano in 30</title>
+  <title>Privacy Policy — Italiano in 30</title>
   <style>
     :root { color-scheme: light dark; }
     body {
@@ -11,7 +11,7 @@
       line-height: 1.6;
       max-width: 720px;
       margin: 0 auto;
-      padding: 32px 20px 64px;
+      padding: 24px 20px 64px;
       color: #1a1a2e;
       background: #fafafa;
     }
@@ -22,18 +22,299 @@
     li { margin: 8px 0; }
     a { color: #6d4aff; }
     .foot { margin-top: 40px; font-size: 0.85rem; color: #777; }
+    .langbar {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 0 0 24px; padding-bottom: 16px;
+      border-bottom: 1px solid #e3e3ea;
+    }
+    .langbar button {
+      font: inherit; font-size: 0.82rem; cursor: pointer;
+      padding: 5px 11px; border-radius: 999px;
+      border: 1px solid #d0d0dc; background: #fff; color: #444;
+    }
+    .langbar button[aria-current="true"] {
+      background: #6d4aff; border-color: #6d4aff; color: #fff; font-weight: 600;
+    }
     @media (prefers-color-scheme: dark) {
       body { color: #e8e8f0; background: #14141f; }
       .updated, .foot { color: #9a9ab0; }
+      .langbar { border-color: #2a2a3a; }
+      .langbar button { background: #1d1d2b; border-color: #33334a; color: #c8c8d8; }
+      .langbar button[aria-current="true"] { background: #6d4aff; border-color: #6d4aff; color: #fff; }
     }
   </style>
 </head>
 <body>
-  <h1>Política de Privacidad — Italiano in 30</h1>
-  <p class="updated">Última actualización: 29 de mayo de 2026</p>
+  <nav class="langbar" id="langbar" aria-label="Language / Idioma"></nav>
 
-  <p>En <strong>Italiano in 30</strong> nos tomamos en serio tu privacidad. Esta
-  política explica, de forma clara, qué datos tratamos y cómo.</p>
+  <!-- Contenido por defecto en inglés (visible aunque JavaScript esté desactivado).
+       Con JavaScript se sustituye por el idioma del usuario. -->
+  <main id="content">
+    <h1>Privacy Policy — Italiano in 30</h1>
+    <p class="updated">Last updated: 2 June 2026</p>
+    <p>At <strong>Italiano in 30</strong> we take your privacy seriously. This policy explains, clearly, what data we process and how.</p>
+    <h2>What data we process and how</h2>
+    <ul>
+      <li><strong>Your name:</strong> stored <strong>only on your device</strong> (for the greeting and your diploma). It is never uploaded to any server.</li>
+      <li><strong>Your progress</strong> (lessons, streak, statistics): stored on your device. It is only copied to the cloud (Firebase) <strong>if you give your consent</strong>, to sync across your devices.</li>
+      <li><strong>Microphone:</strong> the audio from pronunciation exercises is processed <strong>on your own device</strong> (offline engine). It is <strong>not recorded, not stored and not sent</strong> to any server.</li>
+      <li><strong>League (optional):</strong> if you join the leaderboard, a nickname and your score are stored.</li>
+      <li><strong>Usage and error statistics:</strong> <strong>only if you give your consent</strong>, anonymous usage statistics (which features you use, to improve the app) and technical crash reports are sent. We use <strong>PostHog</strong> and <strong>Sentry</strong> (servers in the European Union). <strong>No personal information</strong> and no cross-app tracking.</li>
+      <li><strong>Purchases:</strong> handled by Google Play / Apple. We <strong>never</strong> see or store your card details.</li>
+    </ul>
+    <h2>What we do NOT do</h2>
+    <p>We do not sell your data, we do not show ads, we do not track you across apps and we do not use facial recognition.</p>
+    <h2>Third parties</h2>
+    <p>We use Google services (Google Play for payments; Firebase for syncing and the league, both optional), an anonymous usage-statistics service (<strong>PostHog</strong>, servers in the EU) and an error-reporting service (<strong>Sentry</strong>, servers in the EU). Statistics and reports are only sent if you give your consent. Each service processes data according to its own privacy policy.</p>
+    <h2>Your rights (GDPR)</h2>
+    <p>You can access your data and <strong>delete it completely</strong> from <em>Settings → Delete my data</em> inside the app. For any query, write to us at: <a href="mailto:italianoin30@gmail.com">italianoin30@gmail.com</a>.</p>
+    <h2>Minors</h2>
+    <p>The app is not intended for children under 14.</p>
+    <p class="foot">Italiano in 30 — Italian learning app (level A1).</p>
+  </main>
+
+  <script>
+    var EMAIL = 'italianoin30@gmail.com';
+    var MAIL = '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>';
+    var ORDER = ['es','en','it','fr','de','pt','nl','pl'];
+    var T = {
+      es: {
+        name: 'Español',
+        title: 'Política de Privacidad — Italiano in 30',
+        updated: 'Última actualización: 2 de junio de 2026',
+        intro: 'En <strong>Italiano in 30</strong> nos tomamos en serio tu privacidad. Esta política explica, de forma clara, qué datos tratamos y cómo.',
+        hData: 'Qué datos tratamos y cómo',
+        data: [
+          '<strong>Tu nombre:</strong> se guarda <strong>solo en tu dispositivo</strong> (para el saludo y tu diploma). No se sube a ningún servidor.',
+          '<strong>Tu progreso</strong> (lecciones, racha, estadísticas): se guarda en tu dispositivo. Solo se copia a la nube (Firebase) <strong>si das tu consentimiento</strong>, para sincronizar entre tus dispositivos.',
+          '<strong>Micrófono:</strong> el audio de los ejercicios de pronunciación se procesa <strong>en tu propio dispositivo</strong> (motor sin conexión). <strong>No se graba, no se almacena y no se envía</strong> a ningún servidor.',
+          '<strong>Liga (opcional):</strong> si te unes a la clasificación, se guarda un apodo y tu puntuación.',
+          '<strong>Estadísticas de uso y errores:</strong> <strong>solo si das tu consentimiento</strong>, se envían de forma anónima estadísticas de uso (qué funciones usas, para mejorar la app) e informes técnicos de fallos. Usamos <strong>PostHog</strong> y <strong>Sentry</strong> (servidores en la Unión Europea). <strong>Sin información personal</strong> y sin rastreo entre apps.',
+          '<strong>Compras:</strong> las gestiona Google Play / Apple. <strong>Nunca</strong> vemos ni guardamos los datos de tu tarjeta.'
+        ],
+        hNo: 'Lo que NO hacemos',
+        no: 'No vendemos tus datos, no mostramos publicidad, no te rastreamos entre apps y no usamos reconocimiento facial.',
+        hThird: 'Terceros',
+        third: 'Usamos servicios de Google (Google Play para los pagos; Firebase para la sincronización y la liga, ambas opcionales), un servicio de estadísticas de uso anónimas (<strong>PostHog</strong>, servidores en la UE) y un servicio de informes de errores (<strong>Sentry</strong>, servidores en la UE). Las estadísticas y los informes solo se envían si das tu consentimiento. Cada servicio trata los datos según su propia política de privacidad.',
+        hRights: 'Tus derechos (RGPD)',
+        rights: 'Puedes acceder a tus datos y <strong>borrarlos por completo</strong> desde <em>Ajustes → Eliminar mis datos</em> dentro de la app. Para cualquier consulta, escríbenos a: ' + MAIL + '.',
+        hMinors: 'Menores',
+        minors: 'La app no está dirigida a menores de 14 años.',
+        foot: 'Italiano in 30 — App de aprendizaje de italiano (nivel A1).'
+      },
+      en: {
+        name: 'English',
+        title: 'Privacy Policy — Italiano in 30',
+        updated: 'Last updated: 2 June 2026',
+        intro: 'At <strong>Italiano in 30</strong> we take your privacy seriously. This policy explains, clearly, what data we process and how.',
+        hData: 'What data we process and how',
+        data: [
+          '<strong>Your name:</strong> stored <strong>only on your device</strong> (for the greeting and your diploma). It is never uploaded to any server.',
+          '<strong>Your progress</strong> (lessons, streak, statistics): stored on your device. It is only copied to the cloud (Firebase) <strong>if you give your consent</strong>, to sync across your devices.',
+          '<strong>Microphone:</strong> the audio from pronunciation exercises is processed <strong>on your own device</strong> (offline engine). It is <strong>not recorded, not stored and not sent</strong> to any server.',
+          '<strong>League (optional):</strong> if you join the leaderboard, a nickname and your score are stored.',
+          '<strong>Usage and error statistics:</strong> <strong>only if you give your consent</strong>, anonymous usage statistics (which features you use, to improve the app) and technical crash reports are sent. We use <strong>PostHog</strong> and <strong>Sentry</strong> (servers in the European Union). <strong>No personal information</strong> and no cross-app tracking.',
+          '<strong>Purchases:</strong> handled by Google Play / Apple. We <strong>never</strong> see or store your card details.'
+        ],
+        hNo: 'What we do NOT do',
+        no: 'We do not sell your data, we do not show ads, we do not track you across apps and we do not use facial recognition.',
+        hThird: 'Third parties',
+        third: 'We use Google services (Google Play for payments; Firebase for syncing and the league, both optional), an anonymous usage-statistics service (<strong>PostHog</strong>, servers in the EU) and an error-reporting service (<strong>Sentry</strong>, servers in the EU). Statistics and reports are only sent if you give your consent. Each service processes data according to its own privacy policy.',
+        hRights: 'Your rights (GDPR)',
+        rights: 'You can access your data and <strong>delete it completely</strong> from <em>Settings → Delete my data</em> inside the app. For any query, write to us at: ' + MAIL + '.',
+        hMinors: 'Minors',
+        minors: 'The app is not intended for children under 14.',
+        foot: 'Italiano in 30 — Italian learning app (level A1).'
+      },
+      it: {
+        name: 'Italiano',
+        title: 'Informativa sulla Privacy — Italiano in 30',
+        updated: 'Ultimo aggiornamento: 2 giugno 2026',
+        intro: 'Su <strong>Italiano in 30</strong> prendiamo sul serio la tua privacy. Questa informativa spiega, in modo chiaro, quali dati trattiamo e come.',
+        hData: 'Quali dati trattiamo e come',
+        data: [
+          '<strong>Il tuo nome:</strong> salvato <strong>solo sul tuo dispositivo</strong> (per il saluto e il tuo diploma). Non viene caricato su alcun server.',
+          '<strong>I tuoi progressi</strong> (lezioni, serie, statistiche): salvati sul tuo dispositivo. Vengono copiati nel cloud (Firebase) <strong>solo se dai il consenso</strong>, per sincronizzare tra i tuoi dispositivi.',
+          '<strong>Microfono:</strong> l’audio degli esercizi di pronuncia viene elaborato <strong>sul tuo dispositivo</strong> (motore offline). <strong>Non viene registrato, né memorizzato, né inviato</strong> ad alcun server.',
+          '<strong>Classifica (facoltativa):</strong> se ti unisci alla classifica, vengono salvati un soprannome e il tuo punteggio.',
+          '<strong>Statistiche d’uso ed errori:</strong> <strong>solo se dai il consenso</strong>, vengono inviate statistiche d’uso anonime (quali funzioni usi, per migliorare l’app) e report tecnici sugli arresti anomali. Usiamo <strong>PostHog</strong> e <strong>Sentry</strong> (server nell’Unione Europea). <strong>Nessun dato personale</strong> e nessun tracciamento tra app.',
+          '<strong>Acquisti:</strong> gestiti da Google Play / Apple. <strong>Non</strong> vediamo né conserviamo i dati della tua carta.'
+        ],
+        hNo: 'Cosa NON facciamo',
+        no: 'Non vendiamo i tuoi dati, non mostriamo pubblicità, non ti tracciamo tra le app e non usiamo il riconoscimento facciale.',
+        hThird: 'Terze parti',
+        third: 'Usiamo servizi di Google (Google Play per i pagamenti; Firebase per la sincronizzazione e la classifica, entrambe facoltative), un servizio di statistiche d’uso anonime (<strong>PostHog</strong>, server nell’UE) e un servizio di report degli errori (<strong>Sentry</strong>, server nell’UE). Le statistiche e i report vengono inviati solo se dai il consenso. Ogni servizio tratta i dati secondo la propria informativa sulla privacy.',
+        hRights: 'I tuoi diritti (GDPR)',
+        rights: 'Puoi accedere ai tuoi dati ed <strong>eliminarli completamente</strong> da <em>Impostazioni → Elimina i miei dati</em> nell’app. Per qualsiasi richiesta, scrivici a: ' + MAIL + '.',
+        hMinors: 'Minori',
+        minors: 'L’app non è destinata ai minori di 14 anni.',
+        foot: 'Italiano in 30 — App per imparare l’italiano (livello A1).'
+      },
+      fr: {
+        name: 'Français',
+        title: 'Politique de confidentialité — Italiano in 30',
+        updated: 'Dernière mise à jour : 2 juin 2026',
+        intro: 'Chez <strong>Italiano in 30</strong>, nous prenons votre vie privée au sérieux. Cette politique explique, clairement, quelles données nous traitons et comment.',
+        hData: 'Quelles données nous traitons et comment',
+        data: [
+          '<strong>Votre nom :</strong> enregistré <strong>uniquement sur votre appareil</strong> (pour le message d’accueil et votre diplôme). Il n’est jamais envoyé à un serveur.',
+          '<strong>Votre progression</strong> (leçons, série, statistiques) : enregistrée sur votre appareil. Elle n’est copiée dans le cloud (Firebase) <strong>que si vous y consentez</strong>, pour la synchroniser entre vos appareils.',
+          '<strong>Microphone :</strong> l’audio des exercices de prononciation est traité <strong>sur votre propre appareil</strong> (moteur hors ligne). Il n’est <strong>ni enregistré, ni stocké, ni envoyé</strong> à un serveur.',
+          '<strong>Classement (facultatif) :</strong> si vous rejoignez le classement, un pseudonyme et votre score sont enregistrés.',
+          '<strong>Statistiques d’usage et erreurs :</strong> <strong>uniquement si vous y consentez</strong>, des statistiques d’usage anonymes (les fonctions que vous utilisez, pour améliorer l’app) et des rapports techniques de plantage sont envoyés. Nous utilisons <strong>PostHog</strong> et <strong>Sentry</strong> (serveurs dans l’Union européenne). <strong>Aucune information personnelle</strong> et aucun suivi entre applications.',
+          '<strong>Achats :</strong> gérés par Google Play / Apple. Nous ne voyons <strong>jamais</strong> et ne conservons pas les données de votre carte.'
+        ],
+        hNo: 'Ce que nous NE faisons PAS',
+        no: 'Nous ne vendons pas vos données, n’affichons pas de publicité, ne vous suivons pas entre applications et n’utilisons pas la reconnaissance faciale.',
+        hThird: 'Tiers',
+        third: 'Nous utilisons des services de Google (Google Play pour les paiements ; Firebase pour la synchronisation et le classement, tous deux facultatifs), un service de statistiques d’usage anonymes (<strong>PostHog</strong>, serveurs dans l’UE) et un service de rapports d’erreurs (<strong>Sentry</strong>, serveurs dans l’UE). Les statistiques et les rapports ne sont envoyés que si vous y consentez. Chaque service traite les données selon sa propre politique de confidentialité.',
+        hRights: 'Vos droits (RGPD)',
+        rights: 'Vous pouvez accéder à vos données et les <strong>supprimer entièrement</strong> depuis <em>Réglages → Supprimer mes données</em> dans l’app. Pour toute question, écrivez-nous à : ' + MAIL + '.',
+        hMinors: 'Mineurs',
+        minors: 'L’application n’est pas destinée aux enfants de moins de 14 ans.',
+        foot: 'Italiano in 30 — Application d’apprentissage de l’italien (niveau A1).'
+      },
+      de: {
+        name: 'Deutsch',
+        title: 'Datenschutzerklärung — Italiano in 30',
+        updated: 'Zuletzt aktualisiert: 2. Juni 2026',
+        intro: 'Bei <strong>Italiano in 30</strong> nehmen wir deinen Datenschutz ernst. Diese Erklärung erläutert klar, welche Daten wir verarbeiten und wie.',
+        hData: 'Welche Daten wir verarbeiten und wie',
+        data: [
+          '<strong>Dein Name:</strong> wird <strong>nur auf deinem Gerät</strong> gespeichert (für die Begrüßung und dein Diplom). Er wird nie auf einen Server hochgeladen.',
+          '<strong>Dein Fortschritt</strong> (Lektionen, Serie, Statistiken): wird auf deinem Gerät gespeichert. Er wird nur in die Cloud (Firebase) kopiert, <strong>wenn du zustimmst</strong>, um zwischen deinen Geräten zu synchronisieren.',
+          '<strong>Mikrofon:</strong> Der Ton der Ausspracheübungen wird <strong>auf deinem eigenen Gerät</strong> verarbeitet (Offline-Engine). Er wird <strong>nicht aufgezeichnet, nicht gespeichert und nicht gesendet</strong>.',
+          '<strong>Liga (optional):</strong> Wenn du der Rangliste beitrittst, werden ein Spitzname und deine Punktzahl gespeichert.',
+          '<strong>Nutzungs- und Fehlerstatistiken:</strong> <strong>nur mit deiner Zustimmung</strong> werden anonyme Nutzungsstatistiken (welche Funktionen du nutzt, zur Verbesserung der App) und technische Absturzberichte gesendet. Wir verwenden <strong>PostHog</strong> und <strong>Sentry</strong> (Server in der Europäischen Union). <strong>Keine personenbezogenen Daten</strong> und kein App-übergreifendes Tracking.',
+          '<strong>Käufe:</strong> werden von Google Play / Apple abgewickelt. Wir sehen und speichern <strong>nie</strong> deine Kartendaten.'
+        ],
+        hNo: 'Was wir NICHT tun',
+        no: 'Wir verkaufen deine Daten nicht, zeigen keine Werbung, verfolgen dich nicht über Apps hinweg und nutzen keine Gesichtserkennung.',
+        hThird: 'Dritte',
+        third: 'Wir nutzen Google-Dienste (Google Play für Zahlungen; Firebase für Synchronisierung und Liga, beide optional), einen Dienst für anonyme Nutzungsstatistiken (<strong>PostHog</strong>, Server in der EU) und einen Dienst für Fehlerberichte (<strong>Sentry</strong>, Server in der EU). Statistiken und Berichte werden nur mit deiner Zustimmung gesendet. Jeder Dienst verarbeitet Daten gemäß seiner eigenen Datenschutzerklärung.',
+        hRights: 'Deine Rechte (DSGVO)',
+        rights: 'Du kannst auf deine Daten zugreifen und sie <strong>vollständig löschen</strong> über <em>Einstellungen → Meine Daten löschen</em> in der App. Bei Fragen schreib uns an: ' + MAIL + '.',
+        hMinors: 'Minderjährige',
+        minors: 'Die App ist nicht für Kinder unter 14 Jahren bestimmt.',
+        foot: 'Italiano in 30 — App zum Italienischlernen (Niveau A1).'
+      },
+      pt: {
+        name: 'Português',
+        title: 'Política de Privacidade — Italiano in 30',
+        updated: 'Última atualização: 2 de junho de 2026',
+        intro: 'Na <strong>Italiano in 30</strong> levamos a sua privacidade a sério. Esta política explica, de forma clara, que dados tratamos e como.',
+        hData: 'Que dados tratamos e como',
+        data: [
+          '<strong>O seu nome:</strong> guardado <strong>apenas no seu dispositivo</strong> (para a saudação e o seu diploma). Nunca é enviado para qualquer servidor.',
+          '<strong>O seu progresso</strong> (lições, sequência, estatísticas): guardado no seu dispositivo. Só é copiado para a nuvem (Firebase) <strong>se der o seu consentimento</strong>, para sincronizar entre os seus dispositivos.',
+          '<strong>Microfone:</strong> o áudio dos exercícios de pronúncia é processado <strong>no seu próprio dispositivo</strong> (motor sem ligação). <strong>Não é gravado, não é armazenado e não é enviado</strong> para qualquer servidor.',
+          '<strong>Liga (opcional):</strong> se aderir à classificação, são guardados uma alcunha e a sua pontuação.',
+          '<strong>Estatísticas de utilização e erros:</strong> <strong>só se der o seu consentimento</strong>, são enviadas estatísticas de utilização anónimas (que funcionalidades usa, para melhorar a app) e relatórios técnicos de falhas. Usamos <strong>PostHog</strong> e <strong>Sentry</strong> (servidores na União Europeia). <strong>Sem informação pessoal</strong> e sem rastreio entre apps.',
+          '<strong>Compras:</strong> geridas pela Google Play / Apple. <strong>Nunca</strong> vemos nem guardamos os dados do seu cartão.'
+        ],
+        hNo: 'O que NÃO fazemos',
+        no: 'Não vendemos os seus dados, não mostramos publicidade, não o rastreamos entre apps e não usamos reconhecimento facial.',
+        hThird: 'Terceiros',
+        third: 'Usamos serviços da Google (Google Play para os pagamentos; Firebase para a sincronização e a liga, ambas opcionais), um serviço de estatísticas de utilização anónimas (<strong>PostHog</strong>, servidores na UE) e um serviço de relatórios de erros (<strong>Sentry</strong>, servidores na UE). As estatísticas e os relatórios só são enviados se der o seu consentimento. Cada serviço trata os dados de acordo com a sua própria política de privacidade.',
+        hRights: 'Os seus direitos (RGPD)',
+        rights: 'Pode aceder aos seus dados e <strong>eliminá-los por completo</strong> em <em>Definições → Eliminar os meus dados</em> dentro da app. Para qualquer questão, escreva-nos para: ' + MAIL + '.',
+        hMinors: 'Menores',
+        minors: 'A app não se destina a menores de 14 anos.',
+        foot: 'Italiano in 30 — App de aprendizagem de italiano (nível A1).'
+      },
+      nl: {
+        name: 'Nederlands',
+        title: 'Privacybeleid — Italiano in 30',
+        updated: 'Laatst bijgewerkt: 2 juni 2026',
+        intro: 'Bij <strong>Italiano in 30</strong> nemen we je privacy serieus. Dit beleid legt duidelijk uit welke gegevens we verwerken en hoe.',
+        hData: 'Welke gegevens we verwerken en hoe',
+        data: [
+          '<strong>Je naam:</strong> wordt <strong>alleen op je apparaat</strong> bewaard (voor de begroeting en je diploma). Hij wordt nooit naar een server geüpload.',
+          '<strong>Je voortgang</strong> (lessen, reeks, statistieken): wordt op je apparaat bewaard. Hij wordt alleen naar de cloud (Firebase) gekopieerd <strong>als je toestemming geeft</strong>, om tussen je apparaten te synchroniseren.',
+          '<strong>Microfoon:</strong> de audio van de uitspraakoefeningen wordt <strong>op je eigen apparaat</strong> verwerkt (offline-engine). Hij wordt <strong>niet opgenomen, niet opgeslagen en niet verzonden</strong> naar een server.',
+          '<strong>Klassement (optioneel):</strong> als je meedoet aan het klassement, worden een bijnaam en je score bewaard.',
+          '<strong>Gebruiks- en foutstatistieken:</strong> <strong>alleen als je toestemming geeft</strong>, worden anonieme gebruiksstatistieken (welke functies je gebruikt, om de app te verbeteren) en technische crashrapporten verzonden. We gebruiken <strong>PostHog</strong> en <strong>Sentry</strong> (servers in de Europese Unie). <strong>Geen persoonlijke informatie</strong> en geen tracking tussen apps.',
+          '<strong>Aankopen:</strong> worden afgehandeld door Google Play / Apple. We zien en bewaren <strong>nooit</strong> je kaartgegevens.'
+        ],
+        hNo: 'Wat we NIET doen',
+        no: 'We verkopen je gegevens niet, tonen geen advertenties, volgen je niet tussen apps en gebruiken geen gezichtsherkenning.',
+        hThird: 'Derden',
+        third: 'We gebruiken Google-diensten (Google Play voor betalingen; Firebase voor synchronisatie en het klassement, beide optioneel), een dienst voor anonieme gebruiksstatistieken (<strong>PostHog</strong>, servers in de EU) en een dienst voor foutrapportage (<strong>Sentry</strong>, servers in de EU). Statistieken en rapporten worden alleen verzonden als je toestemming geeft. Elke dienst verwerkt gegevens volgens zijn eigen privacybeleid.',
+        hRights: 'Je rechten (AVG)',
+        rights: 'Je kunt je gegevens inzien en <strong>volledig verwijderen</strong> via <em>Instellingen → Mijn gegevens verwijderen</em> in de app. Voor vragen, mail ons op: ' + MAIL + '.',
+        hMinors: 'Minderjarigen',
+        minors: 'De app is niet bedoeld voor kinderen jonger dan 14 jaar.',
+        foot: 'Italiano in 30 — App om Italiaans te leren (niveau A1).'
+      },
+      pl: {
+        name: 'Polski',
+        title: 'Polityka prywatności — Italiano in 30',
+        updated: 'Ostatnia aktualizacja: 2 czerwca 2026',
+        intro: 'W <strong>Italiano in 30</strong> poważnie traktujemy Twoją prywatność. Niniejsza polityka jasno wyjaśnia, jakie dane przetwarzamy i w jaki sposób.',
+        hData: 'Jakie dane przetwarzamy i w jaki sposób',
+        data: [
+          '<strong>Twoje imię:</strong> przechowywane <strong>tylko na Twoim urządzeniu</strong> (do powitania i dyplomu). Nigdy nie jest wysyłane na żaden serwer.',
+          '<strong>Twoje postępy</strong> (lekcje, passa, statystyki): przechowywane na Twoim urządzeniu. Są kopiowane do chmury (Firebase) <strong>tylko za Twoją zgodą</strong>, aby synchronizować je między urządzeniami.',
+          '<strong>Mikrofon:</strong> dźwięk ćwiczeń wymowy jest przetwarzany <strong>na Twoim urządzeniu</strong> (silnik offline). <strong>Nie jest nagrywany, przechowywany ani wysyłany</strong> na żaden serwer.',
+          '<strong>Liga (opcjonalnie):</strong> jeśli dołączysz do rankingu, zapisywane są pseudonim i Twój wynik.',
+          '<strong>Statystyki użycia i błędów:</strong> <strong>tylko za Twoją zgodą</strong> wysyłane są anonimowe statystyki użycia (z jakich funkcji korzystasz, aby ulepszać aplikację) oraz techniczne raporty o awariach. Używamy <strong>PostHog</strong> i <strong>Sentry</strong> (serwery w Unii Europejskiej). <strong>Bez danych osobowych</strong> i bez śledzenia między aplikacjami.',
+          '<strong>Zakupy:</strong> obsługiwane przez Google Play / Apple. <strong>Nigdy</strong> nie widzimy ani nie przechowujemy danych Twojej karty.'
+        ],
+        hNo: 'Czego NIE robimy',
+        no: 'Nie sprzedajemy Twoich danych, nie wyświetlamy reklam, nie śledzimy Cię między aplikacjami i nie używamy rozpoznawania twarzy.',
+        hThird: 'Podmioty zewnętrzne',
+        third: 'Korzystamy z usług Google (Google Play do płatności; Firebase do synchronizacji i ligi, obie opcjonalne), z usługi anonimowych statystyk użycia (<strong>PostHog</strong>, serwery w UE) oraz z usługi raportowania błędów (<strong>Sentry</strong>, serwery w UE). Statystyki i raporty są wysyłane tylko za Twoją zgodą. Każda usługa przetwarza dane zgodnie z własną polityką prywatności.',
+        hRights: 'Twoje prawa (RODO)',
+        rights: 'Możesz uzyskać dostęp do swoich danych i <strong>całkowicie je usunąć</strong> w <em>Ustawienia → Usuń moje dane</em> w aplikacji. W razie pytań napisz do nas: ' + MAIL + '.',
+        hMinors: 'Osoby niepełnoletnie',
+        minors: 'Aplikacja nie jest przeznaczona dla dzieci poniżej 14. roku życia.',
+        foot: 'Italiano in 30 — Aplikacja do nauki włoskiego (poziom A1).'
+      }
+    };
+
+    function render(lang) {
+      var d = T[lang] || T.en;
+      document.getElementById('htmlRoot').lang = lang;
+      document.title = d.title;
+      var items = '';
+      for (var i = 0; i < d.data.length; i++) items += '<li>' + d.data[i] + '</li>';
+      document.getElementById('content').innerHTML =
+        '<h1>' + d.title + '</h1>' +
+        '<p class="updated">' + d.updated + '</p>' +
+        '<p>' + d.intro + '</p>' +
+        '<h2>' + d.hData + '</h2><ul>' + items + '</ul>' +
+        '<h2>' + d.hNo + '</h2><p>' + d.no + '</p>' +
+        '<h2>' + d.hThird + '</h2><p>' + d.third + '</p>' +
+        '<h2>' + d.hRights + '</h2><p>' + d.rights + '</p>' +
+        '<h2>' + d.hMinors + '</h2><p>' + d.minors + '</p>' +
+        '<p class="foot">' + d.foot + '</p>';
+      var btns = document.querySelectorAll('#langbar button');
+      for (var j = 0; j < btns.length; j++) {
+        btns[j].setAttribute('aria-current', btns[j].getAttribute('data-lang') === lang ? 'true' : 'false');
+      }
+      try { localStorage.setItem('privLang', lang); } catch (e) {}
+    }
+
+    // Barra de idiomas
+    var bar = document.getElementById('langbar');
+    var html = '';
+    for (var k = 0; k < ORDER.length; k++) {
+      html += '<button type="button" data-lang="' + ORDER[k] + '">' + T[ORDER[k]].name + '</button>';
+    }
+    bar.innerHTML = html;
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (b) render(b.getAttribute('data-lang'));
+    });
+
+    // Idioma inicial: preferencia guardada → idioma del sistema → inglés
+    var saved = null;
+    try { saved = localStorage.getItem('privLang'); } catch (e) {}
+    var sys = (navigator.language || 'en').toLowerCase().split('-')[0];
+    render((saved && T[saved]) ? saved : (T[sys] ? sys : 'en'));
+  </script>
+</body>
+</html>
 
   <h2>Qué datos tratamos y cómo</h2>
   <ul>
