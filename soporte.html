@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" id="htmlRoot">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Italiano in 30</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      color: #1a1a2e;
+      background: #fafafa;
+    }
+    h1 { font-size: 1.7rem; margin-bottom: 4px; }
+    h2.faqtitle { font-size: 1.15rem; margin-top: 36px; color: #6d4aff; }
+    h3 { font-size: 1.02rem; margin-top: 26px; margin-bottom: 4px; }
+    p { margin-top: 6px; }
+    .intro { color: #444; }
+    a { color: #6d4aff; }
+    .priv { margin-top: 36px; }
+    .foot { margin-top: 32px; font-size: 0.85rem; color: #777; }
+    .langbar {
+      display: flex; flex-wrap: wrap; gap: 6px;
+      margin: 0 0 24px; padding-bottom: 16px;
+      border-bottom: 1px solid #e3e3ea;
+    }
+    .langbar button {
+      font: inherit; font-size: 0.82rem; cursor: pointer;
+      padding: 5px 11px; border-radius: 999px;
+      border: 1px solid #d0d0dc; background: #fff; color: #444;
+    }
+    .langbar button[aria-current="true"] {
+      background: #6d4aff; border-color: #6d4aff; color: #fff; font-weight: 600;
+    }
+    @media (prefers-color-scheme: dark) {
+      body { color: #e8e8f0; background: #14141f; }
+      .intro { color: #b8b8c8; }
+      .foot { color: #9a9ab0; }
+      .langbar { border-color: #2a2a3a; }
+      .langbar button { background: #1d1d2b; border-color: #33334a; color: #c8c8d8; }
+      .langbar button[aria-current="true"] { background: #6d4aff; border-color: #6d4aff; color: #fff; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="langbar" id="langbar" aria-label="Language / Idioma"></nav>
+
+  <!-- Contenido por defecto en inglés (visible aunque JavaScript esté desactivado). -->
+  <main id="content">
+    <h1>Support — Italiano in 30</h1>
+    <p class="intro">Need help? Write to us at <a href="mailto:italianoin30@gmail.com">italianoin30@gmail.com</a> and we will reply as soon as possible.</p>
+    <h2 class="faqtitle">Frequently asked questions</h2>
+    <h3>How does payment work?</h3>
+    <p>The app is free to download. The full course is unlocked with a <strong>one-time payment of €9.99</strong>. No subscriptions, no recurring charges: pay once and it is yours forever.</p>
+    <h3>Does it work offline?</h3>
+    <p>Yes. Once downloaded, the app and all audio work without internet — on a plane, the metro, wherever you like.</p>
+    <h3>The microphone does not recognise my voice well</h3>
+    <p>Grant microphone permission (iPhone Settings → Italiano in 30 → Microphone) and speak somewhere without much noise. If you prefer, you can <strong>type</strong> the answer instead of speaking.</p>
+    <h3>Can I continue my progress on another device?</h3>
+    <p>Yes, by turning on syncing (optional) in the app settings.</p>
+    <h3>How do I delete my data?</h3>
+    <p>From <strong>Settings → Delete my data</strong> inside the app. Everything is deleted completely.</p>
+    <h3>I have another problem</h3>
+    <p>Write to us at <a href="mailto:italianoin30@gmail.com">italianoin30@gmail.com</a> (include your iPhone model if it is a technical issue). We always reply.</p>
+    <p class="priv"><a href="https://italianoin30.github.io/italiano-in-30-privacidad/">Privacy Policy</a></p>
+    <p class="foot">Italiano in 30 — Italian learning app (level A1).</p>
+  </main>
+
+  <script>
+    var EMAIL = 'italianoin30@gmail.com';
+    var MAIL = '<a href="mailto:' + EMAIL + '">' + EMAIL + '</a>';
+    var PRIV = 'https://italianoin30.github.io/italiano-in-30-privacidad/';
+    var ORDER = ['es','en','it','fr','de','pt','nl','pl'];
+    var T = {
+      es: {
+        name: 'Español', title: 'Soporte — Italiano in 30',
+        intro: '¿Necesitas ayuda? Escríbenos a ' + MAIL + ' y te respondemos lo antes posible.',
+        faqTitle: 'Preguntas frecuentes',
+        faq: [
+          { q: '¿Cómo funciona el pago?', a: 'La app se descarga gratis. El curso completo se desbloquea con un <strong>pago único de 9,99 €</strong>. Sin suscripciones ni cobros recurrentes: pagas una vez y es tuyo para siempre.' },
+          { q: '¿Funciona sin conexión?', a: 'Sí. Una vez descargada, la app y todos los audios funcionan sin internet — en el avión, el metro o donde quieras.' },
+          { q: 'El micrófono no reconoce bien mi voz', a: 'Da permiso de micrófono (Ajustes del iPhone → Italiano in 30 → Micrófono) y habla en un sitio sin mucho ruido. Si lo prefieres, puedes <strong>escribir</strong> la respuesta en vez de hablar.' },
+          { q: '¿Puedo seguir mi progreso en otro dispositivo?', a: 'Sí, activando la sincronización (opcional) en los ajustes de la app.' },
+          { q: '¿Cómo borro mis datos?', a: 'Desde <strong>Ajustes → Eliminar mis datos</strong> dentro de la app. Se borra todo por completo.' },
+          { q: 'Tengo otro problema', a: 'Escríbenos a ' + MAIL + ' (indica tu modelo de iPhone si es un fallo técnico). Respondemos siempre.' }
+        ],
+        privacy: 'Política de privacidad',
+        foot: 'Italiano in 30 — App de aprendizaje de italiano (nivel A1).'
+      },
+      en: {
+        name: 'English', title: 'Support — Italiano in 30',
+        intro: 'Need help? Write to us at ' + MAIL + ' and we will reply as soon as possible.',
+        faqTitle: 'Frequently asked questions',
+        faq: [
+          { q: 'How does payment work?', a: 'The app is free to download. The full course is unlocked with a <strong>one-time payment of €9.99</strong>. No subscriptions, no recurring charges: pay once and it is yours forever.' },
+          { q: 'Does it work offline?', a: 'Yes. Once downloaded, the app and all audio work without internet — on a plane, the metro, wherever you like.' },
+          { q: 'The microphone does not recognise my voice well', a: 'Grant microphone permission (iPhone Settings → Italiano in 30 → Microphone) and speak somewhere without much noise. If you prefer, you can <strong>type</strong> the answer instead of speaking.' },
+          { q: 'Can I continue my progress on another device?', a: 'Yes, by turning on syncing (optional) in the app settings.' },
+          { q: 'How do I delete my data?', a: 'From <strong>Settings → Delete my data</strong> inside the app. Everything is deleted completely.' },
+          { q: 'I have another problem', a: 'Write to us at ' + MAIL + ' (include your iPhone model if it is a technical issue). We always reply.' }
+        ],
+        privacy: 'Privacy Policy',
+        foot: 'Italiano in 30 — Italian learning app (level A1).'
+      },
+      it: {
+        name: 'Italiano', title: 'Assistenza — Italiano in 30',
+        intro: 'Hai bisogno di aiuto? Scrivici a ' + MAIL + ' e ti rispondiamo il prima possibile.',
+        faqTitle: 'Domande frequenti',
+        faq: [
+          { q: 'Come funziona il pagamento?', a: 'L’app si scarica gratis. Il corso completo si sblocca con un <strong>pagamento unico di 9,99 €</strong>. Niente abbonamenti né costi ricorrenti: paghi una volta ed è tuo per sempre.' },
+          { q: 'Funziona offline?', a: 'Sì. Una volta scaricata, l’app e tutti gli audio funzionano senza internet — in aereo, in metro o dove vuoi.' },
+          { q: 'Il microfono non riconosce bene la mia voce', a: 'Concedi il permesso del microfono (Impostazioni iPhone → Italiano in 30 → Microfono) e parla in un luogo senza troppo rumore. Se preferisci, puoi <strong>scrivere</strong> la risposta invece di parlare.' },
+          { q: 'Posso continuare i miei progressi su un altro dispositivo?', a: 'Sì, attivando la sincronizzazione (facoltativa) nelle impostazioni dell’app.' },
+          { q: 'Come elimino i miei dati?', a: 'Da <strong>Impostazioni → Elimina i miei dati</strong> nell’app. Viene cancellato tutto completamente.' },
+          { q: 'Ho un altro problema', a: 'Scrivici a ' + MAIL + ' (indica il modello di iPhone se è un problema tecnico). Rispondiamo sempre.' }
+        ],
+        privacy: 'Informativa sulla privacy',
+        foot: 'Italiano in 30 — App per imparare l’italiano (livello A1).'
+      },
+      fr: {
+        name: 'Français', title: 'Assistance — Italiano in 30',
+        intro: 'Besoin d’aide ? Écris-nous à ' + MAIL + ' et nous te répondons dès que possible.',
+        faqTitle: 'Questions fréquentes',
+        faq: [
+          { q: 'Comment fonctionne le paiement ?', a: 'L’app se télécharge gratuitement. Le cours complet se débloque avec un <strong>paiement unique de 9,99 €</strong>. Pas d’abonnement, pas de frais récurrents : tu paies une fois et c’est à toi pour toujours.' },
+          { q: 'Fonctionne-t-elle hors ligne ?', a: 'Oui. Une fois téléchargée, l’app et tous les audios fonctionnent sans internet — en avion, dans le métro ou où tu veux.' },
+          { q: 'Le micro ne reconnaît pas bien ma voix', a: 'Autorise le micro (Réglages iPhone → Italiano in 30 → Microphone) et parle dans un endroit sans trop de bruit. Si tu préfères, tu peux <strong>écrire</strong> la réponse au lieu de parler.' },
+          { q: 'Puis-je continuer ma progression sur un autre appareil ?', a: 'Oui, en activant la synchronisation (facultative) dans les réglages de l’app.' },
+          { q: 'Comment supprimer mes données ?', a: 'Depuis <strong>Réglages → Supprimer mes données</strong> dans l’app. Tout est supprimé entièrement.' },
+          { q: 'J’ai un autre problème', a: 'Écris-nous à ' + MAIL + ' (indique ton modèle d’iPhone s’il s’agit d’un problème technique). Nous répondons toujours.' }
+        ],
+        privacy: 'Politique de confidentialité',
+        foot: 'Italiano in 30 — Application d’apprentissage de l’italien (niveau A1).'
+      },
+      de: {
+        name: 'Deutsch', title: 'Support — Italiano in 30',
+        intro: 'Brauchst du Hilfe? Schreib uns an ' + MAIL + ' und wir antworten so schnell wie möglich.',
+        faqTitle: 'Häufige Fragen',
+        faq: [
+          { q: 'Wie funktioniert die Bezahlung?', a: 'Die App ist kostenlos. Der komplette Kurs wird mit einer <strong>Einmalzahlung von 9,99 €</strong> freigeschaltet. Keine Abos, keine wiederkehrenden Kosten: einmal zahlen und für immer behalten.' },
+          { q: 'Funktioniert sie offline?', a: 'Ja. Nach dem Download funktionieren die App und alle Audios ohne Internet — im Flugzeug, in der U-Bahn oder wo du willst.' },
+          { q: 'Das Mikrofon erkennt meine Stimme nicht gut', a: 'Erlaube den Mikrofonzugriff (iPhone-Einstellungen → Italiano in 30 → Mikrofon) und sprich an einem Ort ohne viel Lärm. Wenn du willst, kannst du die Antwort auch <strong>tippen</strong> statt sprechen.' },
+          { q: 'Kann ich meinen Fortschritt auf einem anderen Gerät fortsetzen?', a: 'Ja, indem du die Synchronisierung (optional) in den App-Einstellungen aktivierst.' },
+          { q: 'Wie lösche ich meine Daten?', a: 'Über <strong>Einstellungen → Meine Daten löschen</strong> in der App. Alles wird vollständig gelöscht.' },
+          { q: 'Ich habe ein anderes Problem', a: 'Schreib uns an ' + MAIL + ' (gib dein iPhone-Modell an, wenn es ein technisches Problem ist). Wir antworten immer.' }
+        ],
+        privacy: 'Datenschutzerklärung',
+        foot: 'Italiano in 30 — App zum Italienischlernen (Niveau A1).'
+      },
+      pt: {
+        name: 'Português', title: 'Apoio — Italiano in 30',
+        intro: 'Precisa de ajuda? Escreva-nos para ' + MAIL + ' e respondemos o mais rápido possível.',
+        faqTitle: 'Perguntas frequentes',
+        faq: [
+          { q: 'Como funciona o pagamento?', a: 'A app é gratuita para descarregar. O curso completo é desbloqueado com um <strong>pagamento único de 9,99 €</strong>. Sem subscrições nem cobranças recorrentes: paga uma vez e é seu para sempre.' },
+          { q: 'Funciona sem ligação?', a: 'Sim. Depois de descarregada, a app e todos os áudios funcionam sem internet — no avião, no metro ou onde quiser.' },
+          { q: 'O microfone não reconhece bem a minha voz', a: 'Conceda permissão de microfone (Definições do iPhone → Italiano in 30 → Microfone) e fale num local sem muito ruído. Se preferir, pode <strong>escrever</strong> a resposta em vez de falar.' },
+          { q: 'Posso continuar o meu progresso noutro dispositivo?', a: 'Sim, ativando a sincronização (opcional) nas definições da app.' },
+          { q: 'Como elimino os meus dados?', a: 'Em <strong>Definições → Eliminar os meus dados</strong> dentro da app. É tudo eliminado por completo.' },
+          { q: 'Tenho outro problema', a: 'Escreva-nos para ' + MAIL + ' (indique o modelo do seu iPhone se for um problema técnico). Respondemos sempre.' }
+        ],
+        privacy: 'Política de Privacidade',
+        foot: 'Italiano in 30 — App de aprendizagem de italiano (nível A1).'
+      },
+      nl: {
+        name: 'Nederlands', title: 'Ondersteuning — Italiano in 30',
+        intro: 'Hulp nodig? Schrijf ons op ' + MAIL + ' en we antwoorden zo snel mogelijk.',
+        faqTitle: 'Veelgestelde vragen',
+        faq: [
+          { q: 'Hoe werkt de betaling?', a: 'De app is gratis te downloaden. De volledige cursus wordt ontgrendeld met een <strong>eenmalige betaling van € 9,99</strong>. Geen abonnementen, geen terugkerende kosten: één keer betalen en het is voor altijd van jou.' },
+          { q: 'Werkt het offline?', a: 'Ja. Eenmaal gedownload werken de app en alle audio zonder internet — in het vliegtuig, de metro of waar je maar wilt.' },
+          { q: 'De microfoon herkent mijn stem niet goed', a: 'Geef toestemming voor de microfoon (iPhone-instellingen → Italiano in 30 → Microfoon) en spreek op een plek zonder veel lawaai. Als je wilt, kun je het antwoord ook <strong>typen</strong> in plaats van spreken.' },
+          { q: 'Kan ik mijn voortgang op een ander apparaat voortzetten?', a: 'Ja, door synchronisatie (optioneel) in te schakelen in de app-instellingen.' },
+          { q: 'Hoe verwijder ik mijn gegevens?', a: 'Via <strong>Instellingen → Mijn gegevens verwijderen</strong> in de app. Alles wordt volledig verwijderd.' },
+          { q: 'Ik heb een ander probleem', a: 'Schrijf ons op ' + MAIL + ' (vermeld je iPhone-model als het een technisch probleem is). We antwoorden altijd.' }
+        ],
+        privacy: 'Privacybeleid',
+        foot: 'Italiano in 30 — App om Italiaans te leren (niveau A1).'
+      },
+      pl: {
+        name: 'Polski', title: 'Pomoc — Italiano in 30',
+        intro: 'Potrzebujesz pomocy? Napisz do nas na ' + MAIL + ', a odpowiemy najszybciej, jak to możliwe.',
+        faqTitle: 'Najczęstsze pytania',
+        faq: [
+          { q: 'Jak działa płatność?', a: 'Aplikację pobierasz za darmo. Pełny kurs odblokowujesz <strong>jednorazową płatnością 9,99 €</strong>. Bez subskrypcji i opłat cyklicznych: płacisz raz i jest twój na zawsze.' },
+          { q: 'Czy działa offline?', a: 'Tak. Po pobraniu aplikacja i wszystkie nagrania działają bez internetu — w samolocie, metrze czy gdziekolwiek chcesz.' },
+          { q: 'Mikrofon nie rozpoznaje dobrze mojego głosu', a: 'Zezwól na dostęp do mikrofonu (Ustawienia iPhone’a → Italiano in 30 → Mikrofon) i mów w miejscu bez dużego hałasu. Jeśli wolisz, możesz <strong>wpisać</strong> odpowiedź zamiast mówić.' },
+          { q: 'Czy mogę kontynuować postępy na innym urządzeniu?', a: 'Tak, włączając synchronizację (opcjonalną) w ustawieniach aplikacji.' },
+          { q: 'Jak usunąć moje dane?', a: 'W <strong>Ustawienia → Usuń moje dane</strong> w aplikacji. Wszystko zostaje całkowicie usunięte.' },
+          { q: 'Mam inny problem', a: 'Napisz do nas na ' + MAIL + ' (podaj model iPhone’a, jeśli to problem techniczny). Zawsze odpowiadamy.' }
+        ],
+        privacy: 'Polityka prywatności',
+        foot: 'Italiano in 30 — Aplikacja do nauki włoskiego (poziom A1).'
+      }
+    };
+
+    function render(lang) {
+      var d = T[lang] || T.en;
+      document.getElementById('htmlRoot').lang = lang;
+      document.title = d.title;
+      var faq = '';
+      for (var i = 0; i < d.faq.length; i++) faq += '<h3>' + d.faq[i].q + '</h3><p>' + d.faq[i].a + '</p>';
+      document.getElementById('content').innerHTML =
+        '<h1>' + d.title + '</h1>' +
+        '<p class="intro">' + d.intro + '</p>' +
+        '<h2 class="faqtitle">' + d.faqTitle + '</h2>' +
+        faq +
+        '<p class="priv"><a href="' + PRIV + '">' + d.privacy + '</a></p>' +
+        '<p class="foot">' + d.foot + '</p>';
+      var btns = document.querySelectorAll('#langbar button');
+      for (var j = 0; j < btns.length; j++) {
+        btns[j].setAttribute('aria-current', btns[j].getAttribute('data-lang') === lang ? 'true' : 'false');
+      }
+      try { localStorage.setItem('supLang', lang); } catch (e) {}
+    }
+
+    var bar = document.getElementById('langbar');
+    var html = '';
+    for (var k = 0; k < ORDER.length; k++) {
+      html += '<button type="button" data-lang="' + ORDER[k] + '">' + T[ORDER[k]].name + '</button>';
+    }
+    bar.innerHTML = html;
+    bar.addEventListener('click', function (e) {
+      var b = e.target.closest('button');
+      if (b) render(b.getAttribute('data-lang'));
+    });
+
+    var saved = null;
+    try { saved = localStorage.getItem('supLang'); } catch (e) {}
+    var sys = (navigator.language || 'en').toLowerCase().split('-')[0];
+    render((saved && T[saved]) ? saved : (T[sys] ? sys : 'en'));
+  </script>
+</body>
+</html>
