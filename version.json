@@ -2,9 +2,9 @@
   "_comment_setup": "Sube este archivo TAL CUAL al repo de GitHub Pages 'italiano-in-30-privacidad' (junto al index.html de la política) → queda en https://italianoin30.github.io/italiano-in-30-privacidad/version.json. La app lo lee al arrancar cada 6h. Ver docs/FORCE_UPDATE.md para el playbook completo.",
 
   "min_version": "10.0.0",
-  "latest_version": "10.2.0",
+  "latest_version": "10.4.0",
 
-  "_comment_messages": "Si los omites, la app usa los strings i18n por defecto (atemporales, en cada idioma). Usar {latest_version} y {current_version} como placeholders dinámicos. OJO: latest_version = la versión VIVA en la App Store (aprobada 11-jun-2026). Si PostHog muestra que usuarios en 10.1.0 siguen activando premium gratis (bug del paywall), subir min_version a 10.2.0 = update forzado.",
+  "_comment_messages": "Si los omites, la app usa los strings i18n por defecto (atemporales, en cada idioma). Usar {latest_version} y {current_version} como placeholders dinámicos. OJO: latest_version = la versión VIVA en la App Store (10.4.0 publicada 22-jun-2026: arregla el REGALO de premium al cancelar el pago y la descarga reanudable del motor de voz). Si PostHog muestra que usuarios en <10.4.0 siguen activando premium gratis (purchase_completed sin purchase_initiated), subir min_version a 10.4.0 = update forzado.",
 
   "store_url_ios": "https://apps.apple.com/app/italiano-in-30/id6776010488",
   "store_url_android": "https://play.google.com/store/apps/details?id=com.italianoin30.app"
